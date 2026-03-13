@@ -6,6 +6,11 @@ services:
         container_name: piston_api
         restart: always
         privileged: true
+        environment:
+            - PISTON_RUN_CPU_TIME=600000
+            - PISTON_COMPILE_CPU_TIME=600000
+            - PISTON_RUN_TIMEOUT=600000
+            - PISTON_COMPILE_TIMEOUT=600000
         ports:
             - 2000:2000
         volumes:
